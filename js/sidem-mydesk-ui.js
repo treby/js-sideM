@@ -178,11 +178,13 @@ var SideMMyDeskUI;
       element = document.querySelectorAll('input.name');
       for (i = 0; i < element.length; i++) {
         element[i].addEventListener('input', this._onChangeName(), false);
+        this.sidem.setName(i, element[i].value);
       }
 
       element = document.querySelectorAll('input.line');
       for (i = 0; i < element.length; i++) {
         element[i].addEventListener('input', this._onChangeLine(), false);
+        this.sidem.setLine(i, element[i].value);
       }
     },
   };

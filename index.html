@@ -3,22 +3,68 @@
   <head>
     <meta charset="UTF-8">
     <title>SideM Generator</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>SideM Generator</h1>
-    <p>from <a href="http://saasan.github.io/sidem-mydesk/">http://saasan.github.io/sidem-mydesk/</a></p>
-    <section>
-      <input class="name" type="text" data-number="0">
-      <input class="line" type="text" data-number="0">
-      <input class="name" type="text" data-number="1">
-      <input class="line" type="text" data-number="1">
-      <input type="number" min="0" max="10" value="5" id="cover-heading_input">
-    </section>
-    <section>
-      <p><canvas id="sidem-mydesk" width="640" height="586" class="center-block"></canvas></p>
-      <p><button id="output">Output</button></p>
-      <p id="result"></p>
-    </section>
+    <div class="container">
+      <h1 class="page-header">SideM Generator</h1>
+      <p class="lead">from <a href="http://saasan.github.io/sidem-mydesk/">http://saasan.github.io/sidem-mydesk/</a></p>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">
+            <a data-toggle="collapse" href="#collapseSettings"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+          </h2>
+        </div>
+        <div id="collapseSettings" class="panel-collapse collapse">
+          <div class="panel-body">
+            <legend>Basic settings</legend>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="character1Name" class="col-sm-2">Character1's name</label>
+                <input id="character1Name" class="col-sm-8 name" type="text" data-number="0" placeholder="Name" value="馬場このみ">
+              </div>
+              <div class="form-group">
+                <label for="character1Serif" class="col-sm-2">Character1's serif</label>
+                <input id="character1Serif" class="col-sm-8 line" type="text" data-number="0" placeholder="Serif" value="まだ…まだ1cmくらいは伸びしろがあるはず…！">
+              </div>
+              <div class="form-group">
+                <label for="character2Name" class="col-sm-2">Character2's name</label>
+                <input id="character2Name" class="col-sm-8 name" type="text" data-number="1" placeholder="Character2's name" value="馬場このみ">
+              </div>
+              <div class="form-group">
+                <label for="character2Serif" class="col-sm-2">Character2's serif</label>
+                <input id="character2Serif" class="col-sm-8 line" type="text" data-number="1" placeholder="Character2's serif" value="な､なんですか?つま先立ちなんてしてませんよ?">
+              </div>
+            </form>
+            <legend><a href="https://github.com/watilde/css-filter.js">css-filter.js</a> settings</legend>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="cssFilterJsBlur" class="col-sm-2">blur</label>
+                <input class="col-sm-8" type="number" min="0" max="10" value="0" id="cssFilterJsBlur">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><span class="glyphicon glyphicon-picture"></span> Preview</h2>
+        </div>
+        <div class="panel-body">
+          <p><canvas id="sidem-mydesk" width="640" height="586" class="center-block"></canvas></p>
+          <p><button type="button" class="btn btn-primary btn-lg btn-block" id="output" data-toggle="modal" data-target="#myModal">Create Image</button></p>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
 
     <script src="js/sidem-mydesk.js"></script>
     <script src="js/sidem-mydesk-ui.js"></script>
