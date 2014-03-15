@@ -438,7 +438,6 @@ var SideMMyDesk;
 
       this._drawTopBalloon();
       this._drawBottomBalloon();
-
       this._drawSource();
 
       return this;
@@ -455,6 +454,7 @@ var SideMMyDesk;
 
       this._drawTopBalloon();
       this._drawBottomBalloon();
+      this._drawSource();
 
       return this;
     },

@@ -9,7 +9,7 @@
     elem.addEventListener('change', function() {
       cssFilter('#sidem-mydesk').blur(this.value + 'px');
     });
-    cssFilter('#sidem-mydesk').blur('10px');
+    cssFilter('#sidem-mydesk').blur(elem.value + 'px');
   };
 
   window.addEventListener('load', onLoad, false);
