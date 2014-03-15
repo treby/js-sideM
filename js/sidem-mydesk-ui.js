@@ -186,6 +186,11 @@ var SideMMyDeskUI;
         element[i].addEventListener('input', this._onChangeLine(), false);
         this.sidem.setLine(i, element[i].value);
       }
+
+      element = document.querySelectorAll('img.default-img');
+      for (i = 0; i < element.length; i++) {
+        this.sidem.setImage(i, element[i]);
+      }
     },
   };
 })();
