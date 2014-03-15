@@ -1,0 +1,3 @@
+[submodule "css-filter-js"]
+	path = css-filter-js
+	url = https://github.com/watilde/css-filter.js.git
