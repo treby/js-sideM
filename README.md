@@ -1,3 +1,7 @@
 js-sideM
 ======
-To view original code, visit [GitHub](https://github.com/saasan/saasan.github.com/tree/master/sidem-mydesk).
+Visit [original](http://saasan.github.io/sidem-mydesk/).
+
+## Enhancements
+- CSS filter.
+- Hide balloon if name and serif are empty.
